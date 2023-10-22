@@ -1,0 +1,150 @@
+/* Reset some default styles */
+body, h1, h2, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Basic page styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Navigation and button styles */
+a {
+    text-decoration: none;
+    color: #007BFF;
+    margin-right: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Form styles */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+form input[type="text"], form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Delete button styles */
+.delete-button {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    form {
+        width: 100%;
+    }
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.customer-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.customer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.customer-info {
+    flex: 1;
+}
+
+.customer-name {
+    font-weight: bold;
+}
+
+.customer-amount {
+    color: #007BFF;
+}
+
+.customer-actions {
+    display: flex;
+}
+
+.edit-button,
+.delete-button {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.no-customer {
+    font-style: italic;
+    color: #999;
+}

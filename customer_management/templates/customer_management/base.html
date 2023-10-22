@@ -1,0 +1,16 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Customer Management{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'customer_management/css/style.css' %}">
+</head>
+<body>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <script src="{% static 'customer_management/js/script.js' %}"></script>
+</body>
+</html>

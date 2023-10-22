@@ -1,0 +1,41 @@
+{% extends 'customer_management/base.html' %}
+
+{% block content %}
+    <h1>{% if form.instance.pk %}Edit Customer{% else %}Add Customer{% endif %}</h1>
+    <form method="post">
+        {% csrf_token %}
+
+        <div class="form-grid">
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="{{ form.name.id_for_label }}">Name:</label>
+                </div>
+                <div class="form-col">
+                    {{ form.name }}
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="{{ form.amount.id_for_label }}">Amount (in Rands):</label>
+                </div>
+                <div class="form-col">
+                    {{ form.amount }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-col">
+                <button type="submit" class="form-button">
+                    {% if form.instance.pk %}Save Changes{% else %}Add Customer{% endif %}
+                </button>
+            </div>
+            <div class="form-col">
+                <a href="{% url 'customer_list' %}">
+                    <button type="button" class="form-button">Back to Customer List</button>
+                </a>
+            </div>
+        </div>
+    </form>
+{% endblock %}
